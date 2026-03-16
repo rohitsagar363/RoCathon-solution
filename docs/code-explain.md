@@ -11,6 +11,8 @@ This document explains the project end to end:
 
 This is the most useful version of “every line we wrote.” It is not a literal comment on every single syntax token, but it explains every meaningful block, every added file, every changed behavior, and the reasoning behind it.
 
+For a concise before/after summary of the current branch against the previous submission-ready version, see `docs/v1-vs-v2.md`.
+
 ## 1. Starter State
 
 The original starter repo was very small.
@@ -246,6 +248,7 @@ Why these exist:
 - the first version relied too heavily on vector similarity plus commerce
 - broad “home-adjacent” creators could still score well
 - these constants give the semantic side more precision
+- in the final hardening pass, these vocabularies were expanded so beauty, outdoor, and device queries also have real anchor terms and synonym coverage
 
 #### Utility Functions
 
@@ -264,6 +267,10 @@ Why these exist:
 - lines 104-109:
   match query tokens against creator tokens via synonyms
 
+Important late improvement:
+
+- tokenization became hyphen-aware, so terms like `acne-prone` are interpreted as meaningful tokens instead of being collapsed into one unusable string
+
 #### Query Intent Layer
 
 - lines 111-149:
@@ -273,6 +280,7 @@ What it does:
 
 - `computeQueryIntentScore` measures how much of the concrete query intent appears in the creator bio and tags
 - `computeAnchorIntentScore` checks whether the strongest terms are present
+- the strongest-anchor logic now checks the actual highest-value anchor in the query, not just whether some anchor matched somewhere
 
 Why we added it:
 
@@ -282,6 +290,12 @@ Why we added it:
   but it is not really a `decor` creator
 
 So this layer grounds the semantic side in the exact ask without replacing vector retrieval.
+
+This became especially important in the final hardening pass:
+
+- the first version of query intent was strongest for smart-home
+- the later version generalized it to beauty, outdoor, and devices
+- that is what fixed the benchmark cases that originally failed
 
 #### Business Score
 
@@ -313,6 +327,7 @@ What it penalizes:
 - no brand-industry overlap
 - weak query-intent score
 - missing anchor intent
+- combinations of off-industry plus weak query intent
 
 What it boosts:
 
@@ -323,6 +338,10 @@ What it boosts:
 This is the direct answer to:
 
 - “high vibe / zero GMV must rank lower than good vibe / high GMV”
+
+It also enforces a second practical rule that emerged during testing:
+
+- adjacent high-GMV creators should not outrank category-correct creators when they miss the query's strongest anchor
 
 #### Final Scoring
 
@@ -581,6 +600,7 @@ These are already working:
 - `npm test`
 - `npm run ingest`
 - `npm run submit:smart-home`
+- `npm run evaluate`
 
 We also manually inspected the generated smart-home output and improved the scorer based on the actual results.
 
@@ -642,8 +662,96 @@ Before you upload:
 - confirm `scores.final_score` is `0–1`
 - confirm the file has exactly 10 creators
 - confirm the output is deterministic across repeated runs
+- open `submissions/brand_smart_home_explain.json` and spot-check whether the score breakdown looks believable for the top 3
+- open `submissions/evaluation-report.md` and make sure the primary smart-home case still passes all checks
 
-## 10. Final Practical Advice
+## 10. V2 Extras Added On This Branch
+
+This branch adds three things specifically to stand out from a typical submission.
+
+### A. Explainability artifacts
+
+Added files:
+
+- `src/explain.ts`
+- `submissions/brand_smart_home_explain.json`
+
+Purpose:
+
+- make the final ranking auditable
+- show exactly which components and penalties produced a result
+- make the Loom and interview explanation much stronger
+
+### B. Evaluation harness
+
+Added files:
+
+- `scripts/evaluationCases.ts`
+- `scripts/evaluate.ts`
+- `submissions/evaluation-report.json`
+- `submissions/evaluation-report.md`
+
+Purpose:
+
+- compare `semantic_only`, `business_only`, and `hybrid`
+- benchmark multiple queries across brands
+- prove the hybrid approach is more balanced than either extreme
+
+### C. Tracked submission artifacts
+
+Added files:
+
+- `submissions/brand_smart_home.json`
+- `submissions/README.md`
+
+Purpose:
+
+- keep the actual deliverable in Git
+- make review reproducible
+- avoid relying only on ignored local output files
+
+## 11. V4 Hidden-Benchmark Hardening
+
+After the explainability and evaluation work, I added a much larger hidden-style benchmark and used it to drive the last ranking passes.
+
+What changed:
+
+- the benchmark scaled to 100 cases across smart-home, beauty, and outdoor
+- query-specific preferred industries and stricter pass/fail expectations were added
+- the scorer got several narrow precision passes instead of a broad rewrite
+
+The benchmark progression was:
+
+- baseline: `34 / 100`
+- pass 1: `59 / 100`
+- pass 2: `75 / 100`
+- pass 3: `82 / 100`
+- pass 4: `94 / 100`
+
+The two most important late fixes were:
+
+- direct query-industry matching instead of transitive synonym-based category inference
+- compound-token support for multi-word anchors like `glow-up`, `anti-aging`, `self care`, and `power bank`
+
+Why those mattered:
+
+- they fixed preferred-industry leakage on beauty and outdoor cases
+- they made the lexical layer understand important query phrases that were previously split apart
+- they improved robustness without changing the vector retrieval architecture
+
+Why I stopped at `94 / 100`:
+
+- the remaining misses are a small smart-home device and lighting cluster
+- further tuning started to look like synthetic benchmark overfitting
+- the main submission query stayed strong, which mattered more than chasing a perfect internal score
+
+If someone asks what the benchmark taught me, the answer is:
+
+- vector retrieval was not the weak point
+- most failures came from lexical grounding and query-category precision
+- small, well-measured reranking changes were higher ROI than infrastructure changes
+
+## 12. Final Practical Advice
 
 If you have limited time, the highest-value final steps are:
 

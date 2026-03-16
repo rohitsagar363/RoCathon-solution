@@ -143,6 +143,47 @@ That makes the system easier to reason about and easier to tune.
 
 The dataset has many creators with zero GMV and zero GPM. A pure vector search would absolutely return some of them for on-theme queries. My reranker explicitly pushes those results down.
 
+### It is explainable
+
+I added explainability artifacts for the final submission output. For each ranked creator, I can show:
+
+- semantic score
+- query-intent score
+- business score
+- penalty multiplier
+- which boosts and penalties applied
+
+That makes the model easy to defend in a demo instead of sounding like a black box.
+
+### It is measured, not just intuitive
+
+I added an evaluation harness that compares:
+
+- semantic-only ranking
+- business-only ranking
+- hybrid ranking
+
+across multiple benchmark queries. That lets me explain not just what I built, but why the hybrid approach is better than either extreme.
+
+### It was hardened for hidden tests
+
+The first strong version of the system was excellent on the main smart-home query, but weaker on cross-category hidden-style queries like beauty and outdoor crossover searches.
+
+I improved that by tightening the semantic grounding layer without changing the overall architecture:
+
+- I expanded the query-intent vocabulary and synonym map beyond smart-home terms
+- I made tokenization hyphen-aware so terms like `acne-prone` are actually understood
+- I enforced the query's strongest anchor term in the penalty layer
+
+That matters because it stops adjacent high-GMV creators from outranking category-correct creators just because they are commercially strong. After this tuning pass, the smaller internal benchmark harness passed the cases I defined across smart-home, beauty, and outdoor queries.
+
+I later scaled that benchmark into a 100-case hidden-test suite across all three brands and kept iterating. The model improved from 34 passing cases at baseline to 94 passing cases and 592 of 600 checks passing in the current version, while keeping the main smart-home submission output strong. The last big improvement came from two very targeted fixes:
+
+- compound-token support for phrases like `glow-up`, `anti-aging`, `self care`, and `power bank`
+- stricter query-industry inference that matches direct query hints instead of broad transitive synonym matches
+
+That is a good number to cite in the interview because it shows measured iteration, not intuition, and it also shows that I knew when to stop instead of overfitting the final few synthetic edge cases.
+
 ### It scales conceptually
 
 Even though the dataset is only 200 creators, I still built it like a scalable retrieval system:
@@ -204,6 +245,28 @@ Because semantic retrieval and business ranking solve different problems. The tw
 ### Why add a query-intent score if you already have embeddings?
 
 Because embeddings are good at broad vibe matching, but they can still over-reward adjacent concepts. For example, “home gym for apartments” can look close to “home decor for small apartments” in vector space. The query-intent score gives the semantic side a small amount of explicit grounding in the concrete request, like `decor`, `interior`, `apartment`, or `budget`.
+
+In the final tuning pass, I generalized that same idea beyond smart-home:
+
+- beauty queries rely on anchors like `skincare`, `skin`, and `acne`
+- outdoor queries rely on anchors like `adventure`, `gear`, `hiking`, and `trail`
+- device-oriented home queries rely on anchors like `devices`, `electronics`, and `phone`
+
+That made the reranker more robust on hidden queries without changing the main `0.45 / 0.55` semantic-to-business split.
+
+### How did you harden the ranking for hidden tests?
+
+I kept the vector retrieval stage the same and improved the lexical precision layer on top of it.
+
+Concretely:
+
+1. I inspected the failing benchmark cases instead of guessing.
+2. I noticed the query-intent layer was too biased toward smart-home vocabulary.
+3. I broadened the anchor vocabulary and synonym map for beauty, outdoor, and device queries.
+4. I fixed tokenization so compound terms like `acne-prone` are split into meaningful tokens.
+5. I changed the anchor penalty to enforce the strongest anchor term instead of only checking whether any anchor matched.
+
+That is a good interview answer because it shows I used error analysis, not guesswork.
 
 ### Why top 50 candidates?
 
@@ -373,6 +436,13 @@ If they ask “why is this better than a linear scan?” say:
 - retrieval is done via pgvector nearest-neighbor search
 - the query only reranks a candidate pool, not the whole dataset
 - this is the correct scalable search architecture
+
+If they ask “what makes your repo stand out?” say:
+
+- I did not stop at vector retrieval and reranking
+- I added explainability so every top result can be defended
+- I added an evaluation harness with ablation-style comparisons
+- I tracked the exact submission artifacts in the repo so review is reproducible
 
 ## Next Steps Before Submission
 

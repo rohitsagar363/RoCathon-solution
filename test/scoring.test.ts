@@ -19,6 +19,16 @@ const brandProfile: BrandProfile = {
   gmv: 250000
 };
 
+const beautyBrandProfile: BrandProfile = {
+  id: 'brand_beauty_wellness',
+  industries: ['Beauty', 'Health'],
+  target_audience: {
+    gender: 'FEMALE',
+    age_ranges: ['18-24', '25-34']
+  },
+  gmv: 180000
+};
+
 function buildCreator(
   username: string,
   overrides: Partial<Creator> = {},
@@ -139,6 +149,75 @@ test('query intent score favors concrete query matches over broad home-adjacent 
   assert.ok(
     computeQueryIntentScore(apartmentDecor, query) > computeQueryIntentScore(broadHome, query)
   );
+});
+
+test('query intent score understands beauty anchors beyond the smart-home vocabulary', () => {
+  const skincareCreator = {
+    ...buildCreator(
+      'skincare_creator',
+      {
+        bio: 'Budget skincare routines for acne-prone skin with dermatologist-backed SPF and cleanser tips.',
+        content_style_tags: ['Beauty']
+      },
+      { total_gmv_30d: 14000, gpm: 19 }
+    ),
+    semantic_score: 0.61
+  };
+
+  const genericWellness = {
+    ...buildCreator(
+      'generic_wellness',
+      {
+        bio: 'Healthy lifestyle advice, gym routines, and supplement recommendations for busy people.',
+        content_style_tags: ['Health']
+      },
+      { total_gmv_30d: 36000, gpm: 31 }
+    ),
+    semantic_score: 0.61
+  };
+
+  const query = 'Budget skincare routines for acne-prone skin';
+
+  assert.ok(
+    computeQueryIntentScore(skincareCreator, query) > computeQueryIntentScore(genericWellness, query)
+  );
+});
+
+test('reranker enforces strongest anchor intent on cross-brand queries', () => {
+  const query = 'Budget skincare routines for acne-prone skin';
+  const genericWellness = {
+    ...buildCreator(
+      'generic_wellness',
+      {
+        bio: 'Healthy lifestyle advice, gym routines, and supplement recommendations for busy people.',
+        content_style_tags: ['Health'],
+        projected_score: 92
+      },
+      { total_gmv_30d: 42000, gpm: 35, avg_views_30d: 900000, engagement_rate: 0.09 }
+    ),
+    semantic_score: 0.72
+  };
+
+  const skincareCloser = {
+    ...buildCreator(
+      'skincare_closer',
+      {
+        bio: 'Budget skincare routines for acne-prone skin with SPF, cleanser, and breakout recovery tips.',
+        content_style_tags: ['Beauty'],
+        projected_score: 84
+      },
+      { total_gmv_30d: 18000, gpm: 24, avg_views_30d: 650000, engagement_rate: 0.08 }
+    ),
+    semantic_score: 0.66
+  };
+
+  const [topResult] = rerankCreators(
+    [genericWellness, skincareCloser],
+    beautyBrandProfile,
+    query
+  );
+
+  assert.equal(topResult.username, 'skincare_closer');
 });
 
 test('rerankCreators returns results sorted by final score with score fields attached', () => {
