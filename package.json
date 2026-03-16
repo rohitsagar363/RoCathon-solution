@@ -1,0 +1,22 @@
+{
+  "name": "roc-hackathon",
+  "version": "1.0.0",
+  "scripts": {
+    "ingest": "npx ts-node scripts/ingest.ts",
+    "demo": "npx ts-node scripts/demo.ts",
+    "submit:smart-home": "npx ts-node scripts/generateSubmission.ts",
+    "test": "node --require ts-node/register --test test/**/*.test.ts",
+    "typecheck": "npx tsc --noEmit"
+  },
+  "dependencies": {
+    "openai": "^4.0.0",
+    "pg": "^8.11.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/pg": "^8.10.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
