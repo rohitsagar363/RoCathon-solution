@@ -6,9 +6,9 @@
       "Home"
     ],
     "scores": {
-      "semantic_score": 0.5211227752438642,
+      "semantic_score": 0.5211172533333476,
       "projected_score": 90.2,
-      "final_score": 0.8548987704615952
+      "final_score": 0.8548966372226847
     },
     "metrics": {
       "follower_count": 1854255,
@@ -27,15 +27,15 @@
       }
     },
     "breakdown": {
-      "semantic_score": 0.5211227752438642,
+      "semantic_score": 0.5211172533333476,
       "query_intent_score": 0.7864077669902914,
       "anchor_intent_score": 1,
       "query_industry_score": 1,
-      "content_score": 0.6167617962338346,
+      "content_score": 0.6167578204582627,
       "business_score": 0.7989843041635897,
-      "blend_score": 0.7169841755952,
+      "blend_score": 0.7169823864961926,
       "penalty_multiplier": 1.19235375,
-      "final_score": 0.8548987704615952,
+      "final_score": 0.8548966372226847,
       "components": {
         "projected_norm": 0.7550000000000001,
         "gmv_norm": 0.9438180783151,
@@ -86,9 +86,9 @@
       "Tools & Hardware"
     ],
     "scores": {
-      "semantic_score": 0.42781528200560615,
+      "semantic_score": 0.427794738477667,
       "projected_score": 82.97,
-      "final_score": 0.696236411646672
+      "final_score": 0.6962288531424485
     },
     "metrics": {
       "follower_count": 1707456,
@@ -106,15 +106,15 @@
       }
     },
     "breakdown": {
-      "semantic_score": 0.42781528200560615,
+      "semantic_score": 0.427794738477667,
       "query_intent_score": 0.5728155339805825,
       "anchor_intent_score": 1,
       "query_industry_score": 1,
-      "content_score": 0.5111337991605412,
+      "content_score": 0.5111190078204251,
       "business_score": 0.6965515153194601,
-      "blend_score": 0.6131135430479466,
+      "blend_score": 0.6131068869448945,
       "penalty_multiplier": 1.135575,
-      "final_score": 0.696236411646672,
+      "final_score": 0.6962288531424485,
       "components": {
         "projected_norm": 0.5742499999999999,
         "gmv_norm": 0.9178330634703333,
@@ -164,9 +164,9 @@
       "Home"
     ],
     "scores": {
-      "semantic_score": 0.3476305233103254,
+      "semantic_score": 0.34762051728307974,
       "projected_score": 87.38,
-      "final_score": 0.6506779722669391
+      "final_score": 0.650674466094956
     },
     "metrics": {
       "follower_count": 1142592,
@@ -185,15 +185,15 @@
       }
     },
     "breakdown": {
-      "semantic_score": 0.3476305233103254,
+      "semantic_score": 0.34762051728307974,
       "query_intent_score": 0.3592233009708738,
       "anchor_intent_score": 1,
       "query_industry_score": 1,
-      "content_score": 0.41495417095819154,
+      "content_score": 0.41494696661857466,
       "business_score": 0.7543902006739145,
-      "blend_score": 0.6016439873018392,
+      "blend_score": 0.6016407453490116,
       "penalty_multiplier": 1.0815000000000001,
-      "final_score": 0.6506779722669391,
+      "final_score": 0.650674466094956,
       "components": {
         "projected_norm": 0.6844999999999999,
         "gmv_norm": 0.9926758000662741,
@@ -242,9 +242,9 @@
       "Food & Beverage"
     ],
     "scores": {
-      "semantic_score": 0.4152615789667755,
+      "semantic_score": 0.4152787126089028,
       "projected_score": 83.86,
-      "final_score": 0.622105793062432
+      "final_score": 0.6221117967934353
     },
     "metrics": {
       "follower_count": 1777068,
@@ -262,15 +262,15 @@
       }
     },
     "breakdown": {
-      "semantic_score": 0.4152615789667755,
+      "semantic_score": 0.4152787126089028,
       "query_intent_score": 0.3592233009708738,
       "anchor_intent_score": 1,
       "query_industry_score": 1,
-      "content_score": 0.4636485310308356,
+      "content_score": 0.46366086725316724,
       "business_score": 0.6665147635405371,
-      "blend_score": 0.5752249589111714,
+      "blend_score": 0.5752305102112207,
       "penalty_multiplier": 1.0815000000000001,
-      "final_score": 0.622105793062432,
+      "final_score": 0.6221117967934353,
       "components": {
         "projected_norm": 0.5965,
         "gmv_norm": 0.9774076547233772,
@@ -319,9 +319,9 @@
       "Home"
     ],
     "scores": {
-      "semantic_score": 0.42997234430825826,
+      "semantic_score": 0.4299257495985075,
       "projected_score": 75.57,
-      "final_score": 0.5780077959900971
+      "final_score": 0.5779914689242323
     },
     "metrics": {
       "follower_count": 236829,
@@ -339,15 +339,15 @@
       }
     },
     "breakdown": {
-      "semantic_score": 0.42997234430825826,
+      "semantic_score": 0.4299257495985075,
       "query_intent_score": 0.5728155339805825,
       "anchor_intent_score": 1,
       "query_industry_score": 1,
-      "content_score": 0.5126868840184508,
+      "content_score": 0.5126533358274302,
       "business_score": 0.5522563892076116,
-      "blend_score": 0.5344501118724891,
+      "blend_score": 0.53443501518653,
       "penalty_multiplier": 1.0815000000000001,
-      "final_score": 0.5780077959900971,
+      "final_score": 0.5779914689242323,
       "components": {
         "projected_norm": 0.3892499999999998,
         "gmv_norm": 0.8145957955800553,
@@ -396,9 +396,9 @@
       "Food & Beverage"
     ],
     "scores": {
-      "semantic_score": 0.34219069071458086,
+      "semantic_score": 0.3422058619700723,
       "projected_score": 78.41,
-      "final_score": 0.5425132903910318
+      "final_score": 0.5425186064899835
     },
     "metrics": {
       "follower_count": 1880744,
@@ -417,15 +417,15 @@
       }
     },
     "breakdown": {
-      "semantic_score": 0.34219069071458086,
+      "semantic_score": 0.3422058619700723,
       "query_intent_score": 0.5728155339805825,
       "anchor_intent_score": 1,
       "query_industry_score": 1,
-      "content_score": 0.44948409343100304,
+      "content_score": 0.44949501673495695,
       "business_score": 0.5442955814239453,
-      "blend_score": 0.5016304118271213,
+      "blend_score": 0.5016353273139006,
       "penalty_multiplier": 1.0815000000000001,
-      "final_score": 0.5425132903910318,
+      "final_score": 0.5425186064899835,
       "components": {
         "projected_norm": 0.46024999999999994,
         "gmv_norm": 0.7972370907094406,
@@ -472,9 +472,9 @@
       "Home"
     ],
     "scores": {
-      "semantic_score": 0.4146236802097597,
+      "semantic_score": 0.41467649489588143,
       "projected_score": 72,
-      "final_score": 0.48912421081879953
+      "final_score": 0.48914086674341417
     },
     "metrics": {
       "follower_count": 87000,
@@ -492,15 +492,15 @@
       }
     },
     "breakdown": {
-      "semantic_score": 0.4146236802097597,
+      "semantic_score": 0.41467649489588143,
       "query_intent_score": 0.5728155339805825,
       "anchor_intent_score": 1,
       "query_industry_score": 1,
-      "content_score": 0.5016358458675318,
+      "content_score": 0.5016738724415395,
       "business_score": 0.503236615923407,
-      "blend_score": 0.5025162693982632,
+      "blend_score": 0.5025333813565667,
       "penalty_multiplier": 0.97335,
-      "final_score": 0.48912421081879953,
+      "final_score": 0.48914086674341417,
       "components": {
         "projected_norm": 0.3,
         "gmv_norm": 0.8560273859723485,
@@ -549,9 +549,9 @@
       "Tools & Hardware"
     ],
     "scores": {
-      "semantic_score": 0.4740748437172363,
+      "semantic_score": 0.47403234431649865,
       "projected_score": 60.66,
-      "final_score": 0.48551783799217996
+      "final_score": 0.48550294594716503
     },
     "metrics": {
       "follower_count": 629580,
@@ -569,15 +569,15 @@
       }
     },
     "breakdown": {
-      "semantic_score": 0.4740748437172363,
+      "semantic_score": 0.47403234431649865,
       "query_intent_score": 0.5728155339805825,
       "anchor_intent_score": 1,
       "query_industry_score": 1,
-      "content_score": 0.544440683592915,
+      "content_score": 0.5444100840243838,
       "business_score": 0.3707849675191829,
-      "blend_score": 0.44893003975236234,
+      "blend_score": 0.44891626994652334,
       "penalty_multiplier": 1.0815000000000001,
-      "final_score": 0.48551783799217996,
+      "final_score": 0.48550294594716503,
       "components": {
         "projected_norm": 0.016499999999999914,
         "gmv_norm": 0.6961669822678799,
@@ -624,9 +624,9 @@
       "Home"
     ],
     "scores": {
-      "semantic_score": 0.5180129310958411,
+      "semantic_score": 0.5180217875579545,
       "projected_score": 66.06,
-      "final_score": 0.48342421373701755
+      "final_score": 0.4834273170944808
     },
     "metrics": {
       "follower_count": 1285462,
@@ -644,15 +644,15 @@
       }
     },
     "breakdown": {
-      "semantic_score": 0.5180129310958411,
+      "semantic_score": 0.5180217875579545,
       "query_intent_score": 0.5728155339805825,
       "anchor_intent_score": 1,
       "query_industry_score": 1,
-      "content_score": 0.5760761065055104,
+      "content_score": 0.5760824831582321,
       "business_score": 0.34138170823931097,
-      "blend_score": 0.4469941874591008,
+      "blend_score": 0.44699705695282543,
       "penalty_multiplier": 1.0815000000000001,
-      "final_score": 0.48342421373701755,
+      "final_score": 0.4834273170944808,
       "components": {
         "projected_norm": 0.15150000000000005,
         "gmv_norm": 0.5762201407518187,
@@ -700,9 +700,9 @@
       "Home"
     ],
     "scores": {
-      "semantic_score": 0.42608738013558,
+      "semantic_score": 0.42606409598411843,
       "projected_score": 96.93,
-      "final_score": 0.4236393700152245
+      "final_score": 0.4236341483151431
     },
     "metrics": {
       "follower_count": 242361,
@@ -720,15 +720,15 @@
       }
     },
     "breakdown": {
-      "semantic_score": 0.42608738013558,
+      "semantic_score": 0.42606409598411843,
       "query_intent_score": 0.06796116504854369,
       "anchor_intent_score": 0,
       "query_industry_score": 1,
-      "content_score": 0.4190159234063555,
+      "content_score": 0.4189991588173031,
       "business_score": 0.7699944372294373,
-      "blend_score": 0.6120541060090505,
+      "blend_score": 0.6120465619439769,
       "penalty_multiplier": 0.6921600000000001,
-      "final_score": 0.4236393700152245,
+      "final_score": 0.4236341483151431,
       "components": {
         "projected_norm": 0.9232500000000001,
         "gmv_norm": 1,

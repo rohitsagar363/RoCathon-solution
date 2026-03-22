@@ -22,11 +22,11 @@
         ]
       }
     },
-    "semantic_score": 0.5211227752438642,
+    "semantic_score": 0.5211172533333476,
     "scores": {
-      "semantic_score": 0.5211227752438642,
+      "semantic_score": 0.5211172533333476,
       "projected_score": 90.2,
-      "final_score": 0.8548987704615952
+      "final_score": 0.8548966372226847
     }
   },
   {
@@ -52,11 +52,11 @@
         ]
       }
     },
-    "semantic_score": 0.42781528200560615,
+    "semantic_score": 0.427794738477667,
     "scores": {
-      "semantic_score": 0.42781528200560615,
+      "semantic_score": 0.427794738477667,
       "projected_score": 82.97,
-      "final_score": 0.696236411646672
+      "final_score": 0.6962288531424485
     }
   },
   {
@@ -83,11 +83,11 @@
         ]
       }
     },
-    "semantic_score": 0.3476305233103254,
+    "semantic_score": 0.34762051728307974,
     "scores": {
-      "semantic_score": 0.3476305233103254,
+      "semantic_score": 0.34762051728307974,
       "projected_score": 87.38,
-      "final_score": 0.6506779722669391
+      "final_score": 0.650674466094956
     }
   },
   {
@@ -113,11 +113,11 @@
         ]
       }
     },
-    "semantic_score": 0.4152615789667755,
+    "semantic_score": 0.4152787126089028,
     "scores": {
-      "semantic_score": 0.4152615789667755,
+      "semantic_score": 0.4152787126089028,
       "projected_score": 83.86,
-      "final_score": 0.622105793062432
+      "final_score": 0.6221117967934353
     }
   },
   {
@@ -143,11 +143,11 @@
         ]
       }
     },
-    "semantic_score": 0.42997234430825826,
+    "semantic_score": 0.4299257495985075,
     "scores": {
-      "semantic_score": 0.42997234430825826,
+      "semantic_score": 0.4299257495985075,
       "projected_score": 75.57,
-      "final_score": 0.5780077959900971
+      "final_score": 0.5779914689242323
     }
   },
   {
@@ -174,11 +174,11 @@
         ]
       }
     },
-    "semantic_score": 0.34219069071458086,
+    "semantic_score": 0.3422058619700723,
     "scores": {
-      "semantic_score": 0.34219069071458086,
+      "semantic_score": 0.3422058619700723,
       "projected_score": 78.41,
-      "final_score": 0.5425132903910318
+      "final_score": 0.5425186064899835
     }
   },
   {
@@ -203,11 +203,11 @@
         ]
       }
     },
-    "semantic_score": 0.4146236802097597,
+    "semantic_score": 0.41467649489588143,
     "scores": {
-      "semantic_score": 0.4146236802097597,
+      "semantic_score": 0.41467649489588143,
       "projected_score": 72,
-      "final_score": 0.48912421081879953
+      "final_score": 0.48914086674341417
     }
   },
   {
@@ -233,11 +233,11 @@
         ]
       }
     },
-    "semantic_score": 0.4740748437172363,
+    "semantic_score": 0.47403234431649865,
     "scores": {
-      "semantic_score": 0.4740748437172363,
+      "semantic_score": 0.47403234431649865,
       "projected_score": 60.66,
-      "final_score": 0.48551783799217996
+      "final_score": 0.48550294594716503
     }
   },
   {
@@ -262,11 +262,11 @@
         ]
       }
     },
-    "semantic_score": 0.5180129310958411,
+    "semantic_score": 0.5180217875579545,
     "scores": {
-      "semantic_score": 0.5180129310958411,
+      "semantic_score": 0.5180217875579545,
       "projected_score": 66.06,
-      "final_score": 0.48342421373701755
+      "final_score": 0.4834273170944808
     }
   },
   {
@@ -292,11 +292,11 @@
         ]
       }
     },
-    "semantic_score": 0.42608738013558,
+    "semantic_score": 0.42606409598411843,
     "scores": {
-      "semantic_score": 0.42608738013558,
+      "semantic_score": 0.42606409598411843,
       "projected_score": 96.93,
-      "final_score": 0.4236393700152245
+      "final_score": 0.4236341483151431
     }
   }
 ]

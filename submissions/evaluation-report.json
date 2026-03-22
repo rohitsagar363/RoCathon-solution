@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-16T19:46:41.262Z",
+  "generated_at": "2026-03-22T21:18:53.467Z",
   "aggregate": {
     "total_cases": 100,
     "passing_cases": 94,
@@ -875,7 +875,7 @@
         "garage_org_hal"
       ],
       "metrics": {
-        "avg_final_score": 0.6402,
+        "avg_final_score": 0.6403,
         "avg_query_intent_score": 0.398,
         "avg_anchor_intent_score": 0.6364,
         "avg_brand_industry_fit": 0.5333,
@@ -1079,7 +1079,7 @@
         "home_office_setup_pam"
       ],
       "metrics": {
-        "avg_final_score": 0.5288,
+        "avg_final_score": 0.5289,
         "avg_query_intent_score": 0.4489,
         "avg_anchor_intent_score": 0.4902,
         "avg_brand_industry_fit": 0.5333,
@@ -2405,7 +2405,7 @@
         "paint_pro_tips_mick"
       ],
       "metrics": {
-        "avg_final_score": 0.599,
+        "avg_final_score": 0.5991,
         "avg_query_intent_score": 0.428,
         "avg_anchor_intent_score": 0.6,
         "avg_brand_industry_fit": 0.5333,
@@ -2918,7 +2918,7 @@
         "phone_reviewer_kai"
       ],
       "metrics": {
-        "avg_final_score": 0.5812,
+        "avg_final_score": 0.5816,
         "avg_query_intent_score": 0.5553,
         "avg_anchor_intent_score": 0.9,
         "avg_brand_industry_fit": 0.3333,
@@ -3328,7 +3328,7 @@
         "gaming_phones_rio"
       ],
       "metrics": {
-        "avg_final_score": 0.6477,
+        "avg_final_score": 0.6476,
         "avg_query_intent_score": 0.4909,
         "avg_anchor_intent_score": 0.7,
         "avg_brand_industry_fit": 0.3333,
@@ -3839,7 +3839,7 @@
         "mens_grooming_kai"
       ],
       "metrics": {
-        "avg_final_score": 0.6865,
+        "avg_final_score": 0.6864,
         "avg_query_intent_score": 0.6763,
         "avg_anchor_intent_score": 0.9017,
         "avg_brand_industry_fit": 0.6,
@@ -5063,7 +5063,7 @@
         "mens_grooming_kai"
       ],
       "metrics": {
-        "avg_final_score": 0.6321,
+        "avg_final_score": 0.6331,
         "avg_query_intent_score": 0.433,
         "avg_anchor_intent_score": 1,
         "avg_brand_industry_fit": 0.6,
@@ -5570,7 +5570,7 @@
         "glow_up_journey_mei"
       ],
       "metrics": {
-        "avg_final_score": 0.7302,
+        "avg_final_score": 0.7301,
         "avg_query_intent_score": 0.72,
         "avg_anchor_intent_score": 1,
         "avg_brand_industry_fit": 0.7,
@@ -6890,7 +6890,7 @@
         "mens_grooming_kai"
       ],
       "metrics": {
-        "avg_final_score": 0.6313,
+        "avg_final_score": 0.6311,
         "avg_query_intent_score": 0.43,
         "avg_anchor_intent_score": 1,
         "avg_brand_industry_fit": 0.6,
@@ -7499,7 +7499,7 @@
         "ski_season_vera"
       ],
       "metrics": {
-        "avg_final_score": 0.6086,
+        "avg_final_score": 0.6084,
         "avg_query_intent_score": 0.5172,
         "avg_anchor_intent_score": 1,
         "avg_brand_industry_fit": 0.5,
@@ -9528,7 +9528,7 @@
         "gaming_phones_rio"
       ],
       "metrics": {
-        "avg_final_score": 0.5332,
+        "avg_final_score": 0.5333,
         "avg_query_intent_score": 0.4895,
         "avg_anchor_intent_score": 0.9018,
         "avg_brand_industry_fit": 0.5,
@@ -9556,7 +9556,7 @@
             "climbing_wall_finn",
             "ski_season_vera",
             "gaming_phones_rio",
-            "kids_toy_reviews"
+            "baby_gear_reviews_amy"
           ]
         },
         {

@@ -1,6 +1,6 @@
 # Hidden Test Benchmark
 
-Generated: 2026-03-16T19:46:41.262Z
+Generated: 2026-03-22T21:18:53.467Z
 
 ## Summary
 
@@ -187,7 +187,7 @@ Generated: 2026-03-16T19:46:41.262Z
 - Purpose: Tests smaller decor niche intent without drifting to unrelated home creators.
 - Preferred industries: Home
 - Hybrid top 5: small_space_living_lee, paint_pro_tips_mick, mid_century_milo, home_office_setup_pam, garage_org_hal
-- Metrics: avg_final=0.6402, avg_query_intent=0.398, avg_anchor_intent=0.6364, avg_brand_industry_fit=0.5333, avg_preferred_industry_fit=1, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
+- Metrics: avg_final=0.6403, avg_query_intent=0.398, avg_anchor_intent=0.6364, avg_brand_industry_fit=0.5333, avg_preferred_industry_fit=1, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
 - Checks:
   - PASS Top 5 should avoid zero-GMV false positives (0 zero-GMV creators)
   - PASS Top 5 should mostly overlap brand industries (0 off-brand creators)
@@ -227,7 +227,7 @@ Generated: 2026-03-16T19:46:41.262Z
 - Purpose: Should surface lighting-aware home creators, not electronics-first creators.
 - Preferred industries: Home, Tools & Hardware
 - Hybrid top 5: small_space_living_lee, mid_century_milo, plumbing_diy_skip, paint_pro_tips_mick, home_office_setup_pam
-- Metrics: avg_final=0.5288, avg_query_intent=0.4489, avg_anchor_intent=0.4902, avg_brand_industry_fit=0.5333, avg_preferred_industry_fit=0.8, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=5
+- Metrics: avg_final=0.5289, avg_query_intent=0.4489, avg_anchor_intent=0.4902, avg_brand_industry_fit=0.5333, avg_preferred_industry_fit=0.8, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=5
 - Checks:
   - PASS Top 5 should avoid zero-GMV false positives (0 zero-GMV creators)
   - PASS Top 5 should mostly overlap brand industries (0 off-brand creators)
@@ -487,7 +487,7 @@ Generated: 2026-03-16T19:46:41.262Z
 - Purpose: Utility-heavy home query with workshop flavor.
 - Preferred industries: Home, Tools & Hardware
 - Hybrid top 5: small_space_living_lee, garage_org_hal, home_office_setup_pam, plumbing_diy_skip, paint_pro_tips_mick
-- Metrics: avg_final=0.599, avg_query_intent=0.428, avg_anchor_intent=0.6, avg_brand_industry_fit=0.5333, avg_preferred_industry_fit=0.8, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=2
+- Metrics: avg_final=0.5991, avg_query_intent=0.428, avg_anchor_intent=0.6, avg_brand_industry_fit=0.5333, avg_preferred_industry_fit=0.8, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=2
 - Checks:
   - PASS Top 5 should avoid zero-GMV false positives (0 zero-GMV creators)
   - PASS Top 5 should mostly overlap brand industries (0 off-brand creators)
@@ -587,7 +587,7 @@ Generated: 2026-03-16T19:46:41.262Z
 - Purpose: Home security device case for renters and apartments.
 - Preferred industries: Phones & Electronics, Home
 - Hybrid top 5: small_space_living_lee, electrical_safe_pat, webcam_reviews_sky, apple_insider_cy, phone_reviewer_kai
-- Metrics: avg_final=0.5812, avg_query_intent=0.5553, avg_anchor_intent=0.9, avg_brand_industry_fit=0.3333, avg_preferred_industry_fit=0.4, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=1, missing_anchor_top5=1
+- Metrics: avg_final=0.5816, avg_query_intent=0.5553, avg_anchor_intent=0.9, avg_brand_industry_fit=0.3333, avg_preferred_industry_fit=0.4, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=1, missing_anchor_top5=1
 - Checks:
   - PASS Top 5 should avoid zero-GMV false positives (0 zero-GMV creators)
   - PASS Top 5 should mostly overlap brand industries (0 off-brand creators)
@@ -667,7 +667,7 @@ Generated: 2026-03-16T19:46:41.262Z
 - Purpose: Checks home office device setup without losing home fit.
 - Preferred industries: Phones & Electronics, Computer & Office Equipment, Home
 - Hybrid top 5: apple_insider_cy, webcam_reviews_sky, streaming_setup_ada, small_space_living_lee, gaming_phones_rio
-- Metrics: avg_final=0.6477, avg_query_intent=0.4909, avg_anchor_intent=0.7, avg_brand_industry_fit=0.3333, avg_preferred_industry_fit=0.4667, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
+- Metrics: avg_final=0.6476, avg_query_intent=0.4909, avg_anchor_intent=0.7, avg_brand_industry_fit=0.3333, avg_preferred_industry_fit=0.4667, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
 - Checks:
   - PASS Top 5 should avoid zero-GMV false positives (0 zero-GMV creators)
   - PASS Top 5 should mostly overlap brand industries (0 off-brand creators)
@@ -767,7 +767,7 @@ Generated: 2026-03-16T19:46:41.262Z
 - Purpose: Should surface SPF and daily routine creators.
 - Preferred industries: Beauty, Health
 - Hybrid top 5: natural_beauty_jade, glow_up_journey_mei, glam_by_destiny, spf_every_day_quinn, mens_grooming_kai
-- Metrics: avg_final=0.6865, avg_query_intent=0.6763, avg_anchor_intent=0.9017, avg_brand_industry_fit=0.6, avg_preferred_industry_fit=0.6, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
+- Metrics: avg_final=0.6864, avg_query_intent=0.6763, avg_anchor_intent=0.9017, avg_brand_industry_fit=0.6, avg_preferred_industry_fit=0.6, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
 - Checks:
   - PASS Top 5 should avoid zero-GMV false positives (0 zero-GMV creators)
   - PASS Top 5 should mostly overlap brand industries (0 off-brand creators)
@@ -1007,7 +1007,7 @@ Generated: 2026-03-16T19:46:41.262Z
 - Purpose: Launch-style brand query looking for review-driven conversion.
 - Preferred industries: Beauty, Health
 - Hybrid top 5: natural_beauty_jade, glam_by_destiny, glow_up_journey_mei, spf_every_day_quinn, mens_grooming_kai
-- Metrics: avg_final=0.6321, avg_query_intent=0.433, avg_anchor_intent=1, avg_brand_industry_fit=0.6, avg_preferred_industry_fit=0.6, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
+- Metrics: avg_final=0.6331, avg_query_intent=0.433, avg_anchor_intent=1, avg_brand_industry_fit=0.6, avg_preferred_industry_fit=0.6, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
 - Checks:
   - PASS Top 5 should avoid zero-GMV false positives (0 zero-GMV creators)
   - PASS Top 5 should mostly overlap brand industries (0 off-brand creators)
@@ -1107,7 +1107,7 @@ Generated: 2026-03-16T19:46:41.262Z
 - Purpose: Tests ingredient-aware beauty education without losing category fit.
 - Preferred industries: Beauty, Health
 - Hybrid top 5: natural_beauty_jade, glam_by_destiny, holistic_liv_grace, run_daily_derek, glow_up_journey_mei
-- Metrics: avg_final=0.7302, avg_query_intent=0.72, avg_anchor_intent=1, avg_brand_industry_fit=0.7, avg_preferred_industry_fit=0.7, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
+- Metrics: avg_final=0.7301, avg_query_intent=0.72, avg_anchor_intent=1, avg_brand_industry_fit=0.7, avg_preferred_industry_fit=0.7, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
 - Checks:
   - PASS Top 5 should avoid zero-GMV false positives (0 zero-GMV creators)
   - PASS Top 5 should mostly overlap brand industries (0 off-brand creators)
@@ -1367,7 +1367,7 @@ Generated: 2026-03-16T19:46:41.262Z
 - Purpose: Beauty target-audience query that should stay price-aware.
 - Preferred industries: Beauty, Health
 - Hybrid top 5: natural_beauty_jade, glow_up_journey_mei, glam_by_destiny, spf_every_day_quinn, mens_grooming_kai
-- Metrics: avg_final=0.6313, avg_query_intent=0.43, avg_anchor_intent=1, avg_brand_industry_fit=0.6, avg_preferred_industry_fit=0.6, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
+- Metrics: avg_final=0.6311, avg_query_intent=0.43, avg_anchor_intent=1, avg_brand_industry_fit=0.6, avg_preferred_industry_fit=0.6, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
 - Checks:
   - PASS Top 5 should avoid zero-GMV false positives (0 zero-GMV creators)
   - PASS Top 5 should mostly overlap brand industries (0 off-brand creators)
@@ -1487,7 +1487,7 @@ Generated: 2026-03-16T19:46:41.262Z
 - Purpose: Direct outdoor commerce query likely to align with fishing creators.
 - Preferred industries: Sports & Outdoors, Health
 - Hybrid top 5: home_gym_builds, fishing_tales_bob, climbing_wall_finn, yoga_outdoors_ann, ski_season_vera
-- Metrics: avg_final=0.6086, avg_query_intent=0.5172, avg_anchor_intent=1, avg_brand_industry_fit=0.5, avg_preferred_industry_fit=0.8, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
+- Metrics: avg_final=0.6084, avg_query_intent=0.5172, avg_anchor_intent=1, avg_brand_industry_fit=0.5, avg_preferred_industry_fit=0.8, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=0, missing_anchor_top5=0
 - Checks:
   - PASS Top 5 should avoid zero-GMV false positives (0 zero-GMV creators)
   - PASS Top 5 should mostly overlap brand industries (0 off-brand creators)
@@ -1887,7 +1887,7 @@ Generated: 2026-03-16T19:46:41.262Z
 - Purpose: Commerce-heavy rugged gear query.
 - Preferred industries: Sports & Outdoors
 - Hybrid top 5: marathon_pac_kim, climbing_wall_finn, ski_season_vera, mountain_biker_ty, gaming_phones_rio
-- Metrics: avg_final=0.5332, avg_query_intent=0.4895, avg_anchor_intent=0.9018, avg_brand_industry_fit=0.5, avg_preferred_industry_fit=0.8, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=1, missing_anchor_top5=0
+- Metrics: avg_final=0.5333, avg_query_intent=0.4895, avg_anchor_intent=0.9018, avg_brand_industry_fit=0.5, avg_preferred_industry_fit=0.8, zero_gmv_top5=0, off_brand_top5=0, off_preferred_top5=1, missing_anchor_top5=0
 - Checks:
   - PASS Top 5 should avoid zero-GMV false positives (0 zero-GMV creators)
   - PASS Top 5 should mostly overlap brand industries (0 off-brand creators)
@@ -1897,7 +1897,7 @@ Generated: 2026-03-16T19:46:41.262Z
   - PASS Average preferred-industry fit should stay high (0.800)
 - Ablation:
   - semantic_only: workwear_rugged_colt, athletic_fit_cole, outdoor_survival_rex, luxury_menswear_kaz, hiker_adventures_zach
-  - business_only: marathon_pac_kim, climbing_wall_finn, ski_season_vera, gaming_phones_rio, kids_toy_reviews
+  - business_only: marathon_pac_kim, climbing_wall_finn, ski_season_vera, gaming_phones_rio, baby_gear_reviews_amy
   - hybrid: marathon_pac_kim, climbing_wall_finn, ski_season_vera, mountain_biker_ty, gaming_phones_rio
 
 ### outdoor_27
