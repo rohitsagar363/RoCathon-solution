@@ -183,12 +183,6 @@ final_score = clamp(blend * penalty, 0, 1)
 - The percentile thresholds (`58248`, `44`, `203880`, `15829`, `27`) come from the actual dataset distribution. They create a stronger business floor than pure semantic search while staying interpretable.
 - Zero-GMV and zero-GPM creators are penalized after the blend so highly on-theme but commercially empty results cannot dominate the top ranks.
 
-## Brand Profiles
-
-The downloaded starter repo referenced `scripts/demo.ts` and “all 3 brand profiles,” but those files were missing locally. This repo includes `scripts/brands.ts` so the demo and submission commands work from a single source of truth.
-
-If your portal shows different official `brand_*` objects, update `scripts/brands.ts` before generating the final submission file.
-
 ## Verification
 
 Type-check the project:
