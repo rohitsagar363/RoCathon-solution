@@ -84,6 +84,8 @@ Ingest the dataset:
 npm run ingest
 ```
 
+`npm run ingest` reads [creators.json](/Users/rohithsagar/Repos/hack/RoCathon-main/creators.json) from the repo root, generates embeddings, and loads the records into Postgres.
+
 Run the demo queries:
 
 ```bash
